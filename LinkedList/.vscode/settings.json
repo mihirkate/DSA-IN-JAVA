@@ -1,0 +1,7 @@
+{
+    "editor.mouseWheelZoom": true,
+    "window.zoomLevel": 2,
+    "code-runner.runInTerminal": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "code-runner.clearPreviousOutput": true
+}
