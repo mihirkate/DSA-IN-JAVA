@@ -5,7 +5,7 @@ public class DuplicateParanthesis {
     public static boolean isDuplicate(String str) {
         Stack<Character> s = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(0);
+            char ch = str.charAt(i);
             // closing
             if (ch == ')') {
                 int count = 0;
@@ -17,7 +17,8 @@ public class DuplicateParanthesis {
                     return true;
                 } else {
                     s.pop();
-                } // opening pair
+                }
+                // opening pair
             } else {
                 s.push(ch);
             }
@@ -32,9 +33,9 @@ public class DuplicateParanthesis {
         System.out.println("Enter Paranthesis :");
         String str = sc.nextLine();
         if (isDuplicate(str) == true) {
-            System.out.println("The String " + str + "is Duplicate");
+            System.out.println("The Entered  String " + str + "is Duplicate");
         } else {
-            System.out.println("The String " + str + "is  Not (Duplicate");
+            System.out.println("The Entered  String " + str + "is  Not Duplicate");
 
         }
 
