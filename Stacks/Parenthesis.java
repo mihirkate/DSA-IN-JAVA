@@ -35,7 +35,12 @@ public class Parenthesis {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Paranthesis :");
         String str = sc.nextLine();
-        System.out.println(isParanthesis(str));
+        if (isParanthesis(str) == true) {
+            System.out.println("The String " + str + "is Valid Paranthesis");
+        } else {
+            System.out.println("The String " + str + "is  Not Valid Paranthesis");
+
+        }
 
     }
 }
