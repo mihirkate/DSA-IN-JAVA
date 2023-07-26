@@ -47,6 +47,7 @@ public class Histogram {
             maxArea = Math.max(curArea, maxArea);
 
         }
+
         System.out.println("Max Area of The Histogram is :-  " + maxArea);
     }
 
