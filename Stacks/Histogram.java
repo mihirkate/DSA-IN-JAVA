@@ -1,4 +1,5 @@
 import java.util.Stack;
+import java.util.Scanner;
 
 public class Histogram {
 
@@ -48,12 +49,25 @@ public class Histogram {
 
         }
 
-        System.out.println("Max Area of The Histogram is :-  " + maxArea);
+        System.out.println("\tMax Area of The Histogram is :-  " + maxArea);
+    }
+
+    public static void print(int arr[]) {
+        System.out.println("\tThe Elements entered are ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("\t" + arr[i] + "");
+        }
+        System.out.println("\n\tAnd ");
     }
 
     public static void main(String[] args) {
-
-        int arr[] = { 2, 1, 5, 6, 2, 3 };
+        Scanner sc = new Scanner(System.in);
+        Stack<Integer> s = new Stack<>();
+        int arr[] = { 2, 1, 5, 6, 3 };
+        System.out.println("\n\tCode To Largest rectangle in The HistoGram ");
+        System.out.println();
+        print(arr);
         maxHistogram(arr);
+        System.out.println();
     }
 }
