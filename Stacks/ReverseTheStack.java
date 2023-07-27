@@ -7,7 +7,8 @@ public class ReverseTheStack {
             s.push(data);
             return;
         }
-        int top = s.pop();
+        int top = s.peek();
+        s.pop();
         pushAtBottom(s, data);
         s.push(top);
     }
@@ -18,14 +19,15 @@ public class ReverseTheStack {
             return;
         }
 
-        int top = s.pop();
+        int top = s.peek();
+        s.pop();
         reverseTheStack(s);
         pushAtBottom(s, top);
     }
 
     public static void print(Stack<Integer> s) {
         while (!s.isEmpty()) {
-            System.out.println(s.pop());
+            System.out.print(s.pop());
         }
     }
 
@@ -33,16 +35,26 @@ public class ReverseTheStack {
         Scanner sc = new Scanner(System.in);
 
         Stack<Integer> s = new Stack<>();
-        System.out.println("Enter the size of stack");
-        int n = sc.nextInt();
-        System.out.println("Enter the elements in the stack");
-        for (int i = 0; i < n; i++) {
-            int a = sc.nextInt();
-            s.push(a);
-        }
-
-        System.out.println("The reversed elements are :");
+        // System.out.println("Enter the size of stack");
+        // int n = sc.nextInt();
+        // System.out.println("Enter the elements in the stack");
+        // for (int i = 0; i < n; i++) {
+        // int a = sc.nextInt();
+        // s.push(s);
+        // }
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        s.push(40);
+        s.push(50);
+        // print(s);
+        System.out.println(" " + s);
         reverseTheStack(s);
-        print(s);
+        System.out.println("After revering");
+        System.out.println(" " + s);
+
+        // System.out.println("The reversed elements are :");
+        // reverseTheStack(s);
+        // print(s);
     }
 }
