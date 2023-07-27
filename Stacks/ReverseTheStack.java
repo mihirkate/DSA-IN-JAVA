@@ -31,10 +31,7 @@ public class ReverseTheStack {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        Stack<Integer> s = new Stack<>();
+    public static void printl(Stack<Integer> s) {
         // System.out.println("Enter the size of stack");
         // int n = sc.nextInt();
         // System.out.println("Enter the elements in the stack");
@@ -42,19 +39,26 @@ public class ReverseTheStack {
         // int a = sc.nextInt();
         // s.push(s);
         // }
+        // System.out.println("The reversed elements are :");
+        // reverseTheStack(s);
+        // print(s); // print(s);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Stack<Integer> s = new Stack<>();
+
         s.push(10);
         s.push(20);
         s.push(30);
         s.push(40);
         s.push(50);
-        // print(s);
+        System.out.println("Elements Pushed In the stack are :-");
         System.out.println(" " + s);
         reverseTheStack(s);
-        System.out.println("After revering");
+        System.out.println("After reversing");
         System.out.println(" " + s);
 
-        // System.out.println("The reversed elements are :");
-        // reverseTheStack(s);
-        // print(s);
     }
 }
