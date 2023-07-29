@@ -1,5 +1,3 @@
-import java.util.*;
-import java.io.*;
 
 /*
  * You are given an array Arr of size N. You need to find all pairs in the array that sum to a number K. If no such pair exists then output will be -1. The elements of the array are distinct and are in sorted order.
@@ -41,6 +39,9 @@ Constraints:
 2 <= N <= 107
 0 <= K <= 107
  */
+import java.util.*;
+import java.io.*;
+
 public class PairSum {
     public static int pairSum(int arr[], int n, int target) {
         // Write your code here.
