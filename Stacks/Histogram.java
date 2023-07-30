@@ -2,6 +2,46 @@ import java.util.Stack;
 import java.util.Scanner;
 
 public class Histogram {
+    public static long getMaxArea(long hist[], long n) {
+        long nsl[] = new long[hist.length];
+        long nsr[] = new long[hist.length];
+        long maxArea = 0;
+        Stack<Integer> s = new Stack<>();
+        // next smaller right
+        for (long i = n - 1; i >= 0; i--) {
+            while (!s.isEmpty() && hist[s.peek()] >= hist[(int) i]) { // Convert 'i' to int using typecast
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                nsr[(int) i] = (int) hist.length;
+            } else {
+                nsr[(int) i] = (int) s.peek();
+            }
+            s.push((int) i);
+        }
+        s = new Stack<>();
+        // next smaller left
+        for (long i = 0; i < n; i++) {
+            while (!s.isEmpty() && hist[s.peek()] >= hist[(int) i]) { // Convert 'i' to int using typecast
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                nsl[(int) i] = -1;
+            } else {
+                nsl[(int) i] = s.peek();
+            }
+            s.push((int) i);
+        }
+
+        // max area
+        for (long i = 0; i < n; i++) {
+            long height = hist[(int) i];
+            long width = nsr[(int) i] - nsl[(int) i] - 1;
+            long currArea = height * width;
+            maxArea = Math.max(maxArea, currArea);
+        }
+        return maxArea;
+    }
 
     public static void maxHistogram(int arr[]) {
         int nsl[] = new int[arr.length];
