@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class StockSpan {
-    public static void stockSpan(int span[], int stock[]) {
+
+    public static int[] stockSpan(int stock[], int n) {
+        // public static void stockSpan( int stock[], int span[]) {
+
+        int span[] = new int[stock.length];
         Stack<Integer> s = new Stack<>();
         span[0] = 1;
         s.push(0);
@@ -23,6 +27,7 @@ public class StockSpan {
             span[i] = (s.isEmpty()) ? (i + 1) : (i - s.peek());
             s.push(i);
         }
+        return span;
     }
 
     public static void print(int span[]) {
@@ -57,11 +62,15 @@ public class StockSpan {
     }
 
     public static void main(String[] args) {
-        int stock[] = { 60, 10, 20, 40, 35, 30, 50, 70, 65 };
+        // int stock[] = { 60, 10, 20, 40, 35, 30, 50, 70, 65 };
+        int stock[] = { 100, 80, 60, 70, 60, 85, 100 };
         int span[] = new int[stock.length];
         print(span);
-        stockSpan(span, stock);
-        System.out.println("The Span After calculating Stock is :");
-        print(span);
+
+        // stockSpan(span, 9);
+
+        // System.out.println("The Span After calculating Stock is :");
+
+        // print(span);
     }
 }
