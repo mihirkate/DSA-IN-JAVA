@@ -1,4 +1,8 @@
 import java.util.Stack;
+import java.util.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Stack;
 
 public class StockSpan {
     public static void stockSpan(int span[], int stock[]) {
@@ -10,12 +14,13 @@ public class StockSpan {
             while (!s.isEmpty() && curr > stock[s.peek()]) {
                 s.pop();
             }
-            if (s.isEmpty()) {
-                span[i] = i + 1;
-            } else {
-                int prevhigh = s.peek();
-                span[i] = i - prevhigh;
-            }
+            // if (s.isEmpty()) {
+            // span[i] = i + 1;
+            // } else {
+            // int prevhigh = s.peek();
+            // span[i] = i - prevhigh;
+            // }
+            span[i] = (s.isEmpty()) ? (i + 1) : (i - s.peek());
             s.push(i);
         }
     }
@@ -25,6 +30,30 @@ public class StockSpan {
             System.out.print(span[i] + " ");
         }
         System.out.println();
+    }
+
+    public static ArrayList<Integer> findSpans(ArrayList<Integer> price) {
+        ArrayList<Integer> span = new ArrayList<>();
+        Stack<Integer> s = new Stack<>();
+        // int span[]=new int[price.size()];
+        // span[0]=1;
+        // s.push(0);
+        for (int i = 0; i < price.size(); i++) {
+            int currPrice = price.get(i);
+            while (!s.isEmpty() && currPrice >= price.get(s.peek())) {
+                s.pop();
+            }
+            if (s.isEmpty()) {
+                span.add(i + 1);
+                // span[i]=i+1;
+            } else {
+                int prevHigh = s.peek();
+                span.add(i - prevHigh);
+                // span[i]=i-prevHigh;
+            }
+            s.push(i);
+        }
+        return span;
     }
 
     public static void main(String[] args) {
