@@ -38,7 +38,6 @@ public class QueueUsingLL {
                 head = head.next;
             }
             return front;
-
         }
 
         public static int peek() {
