@@ -94,8 +94,8 @@ public class Avg {
 
     }
 
-    public static void flipTheNo() {
-        int n = 10899;
+    public static void flipTheNo(int n) {
+        /* int n = 10899; */
         int rev = 0;
         while (n > 0) {
             int lastDigit = n % 10;
@@ -128,9 +128,14 @@ public class Avg {
         // whileloop();
         // star();
         // reverse();
-        flip();
-        System.out.println();
-        flipTheNo();
+        /*
+         * flip();
+         * System.out.println();
+         * flipTheNo(5001);
+         */
         // star1();
+        int n = 12;
+        int lastDigit = n / 10;
+        System.out.println(lastDigit);
     }
 }
