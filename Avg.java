@@ -120,7 +120,7 @@ public class Avg {
         // square();
         // average();
         // item();
-        // test();
+        test();
         // int $ = 34;
         // System.out.println($);
         // income();
@@ -128,14 +128,16 @@ public class Avg {
         // whileloop();
         // star();
         // reverse();
+        // flip();
         /*
-         * flip();
-         * System.out.println();
+         * * System.out.println();
          * flipTheNo(5001);
          */
         // star1();
-        int n = 12;
-        int lastDigit = n / 10;
-        System.out.println(lastDigit);
+        /*
+         * int n = 12;
+         * int lastDigit = n / 10;
+         * System.out.println(lastDigit);
+         */
     }
 }
