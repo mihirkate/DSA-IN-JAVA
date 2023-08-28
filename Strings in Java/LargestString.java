@@ -6,9 +6,7 @@ public class LargestString {
             if (largest.compareTo(fruits[i]) < 0) {
                 largest = fruits[i];
             }
-            if (largest == null) {
-                return;
-            }
+
         }
         System.out.println(largest);
         String smallest = fruits[0];
