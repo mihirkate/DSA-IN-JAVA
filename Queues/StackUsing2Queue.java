@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class StackUsingQueue {
+public class StackUsing2Queue {
     static class Stack {
         static Queue<Integer> q1 = new LinkedList<>();
         static Queue<Integer> q2 = new LinkedList<>();
@@ -41,8 +41,8 @@ public class StackUsingQueue {
         s.push(2);
         s.push(3);
         while (!s.isEmpty()) {
-            System.out.println(" poped element is " +
-                    s.pop());
+            System.out.println("  " + s.peek());
+            s.pop();
         }
     }
 }
