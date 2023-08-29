@@ -46,6 +46,5 @@ public class QueUsingStack {
             System.out.print(" " + q.peek());
             q.remove();
         }
-        ;
     }
 }
