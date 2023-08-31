@@ -22,9 +22,9 @@ public class QueueReversal {
         q.add(4);
         q.add(5);
         q.add(6);
-        System.out.println(q);
+        System.out.println("Before Reversal of Queue\n" + q);
         reverse(q);
-        System.out.println(q);
+        System.out.println("After Reversal of Queue\n" + q);
 
     }
 }
