@@ -44,7 +44,6 @@ public class DequeStack {
         System.out.println(s.pop());
         System.out.println(s.pop());
 
-        /// //////
         Queue q = new Queue();
         q.add(10);
         q.add(20);

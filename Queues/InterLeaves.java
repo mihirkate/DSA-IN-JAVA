@@ -36,12 +36,20 @@ public class InterLeaves {
         q.add(8);
         q.add(9);
         q.add(10);
-        System.out.println("Before");
         System.out.println(q);
-        System.out.println("Interleaves Of The Queue is ");
-        interleaves(q);
-        System.out.println("After");
+        System.out.println(q.poll());
+        System.out.println(q.remove(q));
         System.out.println(q);
+        System.out.println(q.poll());
 
+        System.out.println(q);
+        /*
+         * System.out.println("Before");
+         * System.out.println(q);
+         * System.out.println("Interleaves Of The Queue is ");
+         * interleaves(q);
+         * System.out.println("After");
+         * System.out.println(q);
+         */
     }
 }

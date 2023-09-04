@@ -12,7 +12,6 @@ public class BinaryNoInQueues {
             System.out.println(s1);
             q.add(s1 + "0");
             q.add(s1 + "1");
-
         }
     }
 
