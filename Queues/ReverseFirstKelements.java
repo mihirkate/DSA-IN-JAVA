@@ -21,8 +21,8 @@ public class ReverseFirstKelements {
         }
 
         while (!q.isEmpty()) {
-            Nq.add(q.peek());
-            q.remove();
+            Nq.add(q.poll());
+            /* q.remove(); */
         }
 
         return Nq;
