@@ -13,18 +13,6 @@ public class TwoDArrays {
         System.out.println("sim  is " + sum);
     }
 
-    public static void repeatationOf2DArray(int array[][]) {
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                if (array[i][j] == 8) {
-                    count = count + 1;
-                }
-            }
-        }
-        System.out.println("8 is repeated " + count + " times");
-    }
-
     public static void printMatrix(int matrix[][]) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
@@ -52,7 +40,6 @@ public class TwoDArrays {
 
     public static void main(String[] args) {
 
-        // sumOfMatrix(matrix);
         // repeatationOf2DArray(array);
         transpose(matrix);
     }

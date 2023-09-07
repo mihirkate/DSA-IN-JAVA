@@ -100,7 +100,7 @@ public class SpiralMatrix {
                 { 15, 25, 35, 45 },
                 { 27, 29, 37, 48 },
                 { 32, 33, 39, 50 } };
-        int[][] array = { { 4, 7, 8 }, { 8, 8, 7 } };
+
         spiralMatrix(matrix);
         // diagnalMatrixBruteForce(matrix);
         // diagnoal(matrix);
