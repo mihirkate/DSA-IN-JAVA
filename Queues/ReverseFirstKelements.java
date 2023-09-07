@@ -29,7 +29,6 @@ public class ReverseFirstKelements {
     }
 
     public static void main(String[] args) {
-
         Queue<Integer> q = new LinkedList<>();
         q.add(1);
         q.add(2);
@@ -42,8 +41,7 @@ public class ReverseFirstKelements {
         q.add(9);
         q.add(10);
         System.out.println("Original Queue: " + q);
-
-        q = reverse(q, 4); // Assign the reversed queue back to q
+        q = reverse(q, 5); // Assign the reversed queue back to q
         System.out.println("Reversed Queue: " + q);
     }
 }

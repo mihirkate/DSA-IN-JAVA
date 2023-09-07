@@ -14,8 +14,10 @@ public class DEqueue {
         System.out.println(d);
         d.addLast(6);
         d.addFirst(4);
+        System.out.println("Peek last " + d.peekLast());
         System.out.println(d);
         System.out.println(d.getFirst());
         System.out.println(d.getLast());
+
     }
 }
