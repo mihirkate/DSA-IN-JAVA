@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class ActivitySelection {
     public static ArrayList<Integer> selectActivity(int arr[]) {
         ArrayList<Integer> ans = new ArrayList<>();
-
         return ans;
     }
 
