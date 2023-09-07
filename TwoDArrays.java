@@ -51,7 +51,6 @@ public class TwoDArrays {
     }
 
     public static void main(String[] args) {
-        // creation2DArrays();
 
         // sumOfMatrix(matrix);
         // repeatationOf2DArray(array);
