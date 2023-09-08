@@ -32,9 +32,9 @@ public class FractionalKnapsack {
     }
 
     public static void main(String[] args) {
-        int val[] = { 60, 100, 120 };
-        int wt[] = { 10, 20, 30 };
-        int capacity = 50;
+        int val[] = { 60, 100, 120, 90 };
+        int wt[] = { 10, 20, 30, 15 };
+        int capacity = 80;
         fractionalKnapsack(val, wt, capacity);
     }
 }
