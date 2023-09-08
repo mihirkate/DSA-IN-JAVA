@@ -1,3 +1,4 @@
+package Arrays;
 public class TrappedWater {
     public static int rainWater(int height[]) {
         int n = height.length;

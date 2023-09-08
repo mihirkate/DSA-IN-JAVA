@@ -1,3 +1,4 @@
+package Searching;
 public class SearchingInRotatedArray {
     public static int linSearch(int arr[], int key) {
         int i = 0;
