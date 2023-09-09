@@ -40,7 +40,7 @@ public class JobSequencing {
 
     public static void main(String[] args) {
         int jobsInfo[][] = { { 4, 20 }, { 1, 10 }, { 1, 40 }, { 1, 30 } };
-        Job j = new Job(1, 2, 4);
+        Job j = new Job(0, 0, 0);
         j.jobSequencing(jobsInfo);
 
     }
