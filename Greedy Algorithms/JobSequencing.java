@@ -34,8 +34,12 @@ public class JobSequencing {
             for (int i = 0; i < ans.size(); i++) {
                 System.out.print(" J" + ans.get(i));
             }
+            for (int i = 0; i < ans.size(); i++) {
+                System.out.print(" J" + ans.get(i));
+            }
             System.out.println();
         }
+
     }
 
     public static void main(String[] args) {
