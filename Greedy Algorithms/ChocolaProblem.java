@@ -2,17 +2,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 
-/*
- * for (int i = 0; i < horVer.length; i++) {
- * System.out.print(" " + horVer[i]);
- * }
- * System.out.println();
- * for (int i = 0; i < costVer.length; i++) {
- * System.out.print(" " + costVer[i]);
- * }
- */
 public class ChocolaProblem {
-    public static void chocola(Integer costVer[], Integer costHor[]) {
+    public static int chocola(Integer costVer[], Integer costHor[]) {
         Arrays.sort(costVer, Collections.reverseOrder());
         Arrays.sort(costHor, Collections.reverseOrder());
 
@@ -34,6 +25,8 @@ public class ChocolaProblem {
                 v++;
             }
         }
+
+        // Remaining Elements
         while (h < costHor.length) {
             cost += (costHor[h] * vp);
             hp++;
@@ -44,12 +37,13 @@ public class ChocolaProblem {
             vp++;
             v++;
         }
-        System.out.println("Cost is " + cost);
+        return cost;
     }
 
     public static void main(String[] args) {
         Integer costVer[] = { 2, 1, 3, 1, 4 };
         Integer costHor[] = { 4, 1, 2 };
-        chocola(costVer, costHor);
+        int cost = chocola(costVer, costHor);
+        System.out.println("\nThe total Minimum cost for cutting the choclate is  " + cost);
     }
 }
