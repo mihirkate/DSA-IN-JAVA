@@ -6,7 +6,6 @@ public class ChocolaProblem {
     public static int chocola(Integer costVer[], Integer costHor[]) {
         Arrays.sort(costVer, Collections.reverseOrder());
         Arrays.sort(costHor, Collections.reverseOrder());
-
         // Horizontal cut-->h, Vertical Cut--->v
         int h = 0, v = 0;
         int hp = 1, vp = 1;
@@ -25,7 +24,6 @@ public class ChocolaProblem {
                 v++;
             }
         }
-
         // Remaining Elements
         while (h < costHor.length) {
             cost += (costHor[h] * vp);
