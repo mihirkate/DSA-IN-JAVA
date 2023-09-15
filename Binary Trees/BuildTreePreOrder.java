@@ -19,6 +19,7 @@ public class BuildTreePreOrder {
             if (node[idx] == -1) {
                 return null;
             }
+            // creation of New Node
             Node newNode = new Node(node[idx]);
             newNode.left = buildTree(node);
             newNode.right = buildTree(node);
