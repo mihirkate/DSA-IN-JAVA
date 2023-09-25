@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 public class PreOrderTraversal {
 
     static class Node {
@@ -55,7 +56,14 @@ public class PreOrderTraversal {
             postOrder(root.right);
             System.out.print(" " + root.data);
         }
-    }
+        public static void levelOrder(Node root){
+            if (root == null) {
+                return;
+            }
+            Queue<Integer> q=new LinkedList<>();
+
+        } 
+           }
 
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
