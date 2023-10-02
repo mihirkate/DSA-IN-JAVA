@@ -3,7 +3,6 @@ public class BuildTreePreOrder {
         int data;
         Node left;
         Node right;
-
         Node(int data) {
             this.data = data;
             this.left = null;
@@ -24,7 +23,6 @@ public class BuildTreePreOrder {
             newNode.left = buildTree(node);
             newNode.right = buildTree(node);
             return newNode;
-
         }
     }
 
