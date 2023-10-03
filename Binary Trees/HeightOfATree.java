@@ -14,6 +14,7 @@ public class HeightOfATree {
     }
 
     public static int heightofTree(Node root) {
+        // base case
         if (root == null) {
             return 0;
         }
@@ -46,6 +47,15 @@ public class HeightOfATree {
 
     public static void main(String[] args) {
         // creation of Tree
+        // creation of Tree
+        /*
+         * 1
+         * / \
+         * 2 3
+         * /\ /\
+         * 4 5 6 7
+         */
+
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
@@ -56,7 +66,9 @@ public class HeightOfATree {
         root.right.right.right = new Node(6);
 
         System.out.println("The height of the Binary Trees is : " + heightofTree(root));
-        System.out.println("The count of Node are :" + countOfNodes(root));
-        System.out.println("The sum of Nodes:" + sumOfNodes(root));
+        /*
+         * System.out.println("The count of Node are :" + countOfNodes(root));
+         * System.out.println("The sum of Nodes:" + sumOfNodes(root));
+         */
     }
 }
