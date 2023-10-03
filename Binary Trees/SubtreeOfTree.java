@@ -1,4 +1,3 @@
-
 public class SubtreeOfTree {
     static class Node {
         int data;
@@ -43,6 +42,14 @@ public class SubtreeOfTree {
 
     public static void main(String[] args) {
         // creation of Tree
+        /*
+         * 1
+         * / \
+         * 2 3
+         * /\ /\
+         * 4 5 6 7
+         */
+
         Node root = new Node(1);
         root.left = new Node(2);
         root.right = new Node(3);
@@ -51,9 +58,14 @@ public class SubtreeOfTree {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
         // creation of subtree
+        /*
+         * 2
+         * / \
+         * 4 5
+         */
         Node subroot = new Node(2);
         subroot.left = new Node(4);
-        subroot.right = new Node(5);
+        /* subroot.right = new Node(5); */
         System.out.println(isSubtree(root, subroot));
     }
 }
