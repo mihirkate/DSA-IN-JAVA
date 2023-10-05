@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -25,10 +26,11 @@ public class TopViewOfTree {
         }
     }
 
-    public static void topView(Node root) {
+    public static ArrayList<Integer> topView(Node root) {
         // level order traversal
         Queue<Info> q = new LinkedList<>();
         HashMap<Integer, Node> map = new HashMap<>();
+        ArrayList<Integer> al = new ArrayList<>();
         int min = 0, max = 0;
         q.add(new Info(root, 0));
         q.add(null);
@@ -59,13 +61,17 @@ public class TopViewOfTree {
         }
 
         for (int i = min; i <= max; i++) {
-            System.out.print(map.get(i).data + " ");
-
+            /* System.out.print(map.get(i).data + " "); */
+            al.add(map.get(i).data);
             /*
              * System.out.println(min + "min");
              * System.out.println(max + "max");
              */
         }
+        for (int i = 0; i < al.size(); i++) {
+            System.out.print(al.get(i));
+        }
+        return al;
     }
 
     public static void main(String[] args) {
@@ -84,7 +90,7 @@ public class TopViewOfTree {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
         root.right.left = new Node(6);
-        root.right.right = new Node(7);
+        /* root.right.right = new Node(7); */
         System.out.println("The Top view of the Tree is :");
         topView(root);
     }
