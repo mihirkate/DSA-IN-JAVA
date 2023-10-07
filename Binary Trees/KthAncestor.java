@@ -43,6 +43,15 @@ public class KthAncestor {
         return max + 1;
     }
 
+    public static void preOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(" " + root.data);
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
     public static void main(String[] args) {
         /*
          * 1
@@ -59,6 +68,7 @@ public class KthAncestor {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
         root.right.right.right = new Node(8);
+        preOrder(root);
         kthAncestor(root, 5, 2);
     }
 }
