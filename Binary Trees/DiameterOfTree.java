@@ -38,7 +38,9 @@ public class DiameterOfTree {
         int diam;
         int height;
 
-        Info(int diam, int height) {
+        M
+
+                Info(int diam, int height) {
             this.diam = diam;
             this.height = height;
         }
