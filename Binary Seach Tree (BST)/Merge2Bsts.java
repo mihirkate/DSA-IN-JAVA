@@ -48,7 +48,6 @@ public class Merge2Bsts {
         ArrayList<Integer> arr2 = new ArrayList<>();
         getInorder(root2, arr2);
         ArrayList<Integer> newArr = new ArrayList<>();
-
         // merger
         int i = 0, j = 0;
         while (i < arr1.size() && j < arr2.size()) {
@@ -83,6 +82,8 @@ public class Merge2Bsts {
         root2.right = new Node(12);
 
         Node root = mergeBsts(root1, root2);
+        System.out.println("Merged BSt is : ");
         preOrder(root);
+
     }
 }

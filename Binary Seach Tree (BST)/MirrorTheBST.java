@@ -58,7 +58,7 @@ public class MirrorTheBST {
          * /\ ___\
          * 3 6 ___12
          * /\ _____ \
-         * 1 4 ____14
+         * 1 4 ______14
          */
         int values[] = { 8, 5, 3, 1, 4, 6, 10, 12, 14 };
         Node root = null;
