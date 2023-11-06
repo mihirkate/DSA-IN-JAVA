@@ -39,8 +39,8 @@ public class AvlTrees {
         x.right = temp;
 
         // update heights
-        x.height = Math.max(height(x.left), height(x.right));
-        y.height = Math.max(height(x.left), height(x.right));
+        x.height = 1 + Math.max(height(x.left), height(x.right));
+        y.height = 1 + Math.max(height(x.left), height(x.right));
         return y;
     }
 
@@ -116,7 +116,7 @@ public class AvlTrees {
          * / \
          * 20 40
          * / \ \
-         * 10 25 30
+         * 10 25 50
          */
         preOrder(root);
     }
