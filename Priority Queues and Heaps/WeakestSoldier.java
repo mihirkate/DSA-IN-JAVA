@@ -27,7 +27,7 @@ public class WeakestSoldier {
                 { 1, 0, 0, 0 },
                 { 1, 1, 0, 0 }
         };
-        int k = 3;
+        int k = 2;
         PriorityQueue<Row> pq = new PriorityQueue<>();
         for (int i = 0; i < army.length; i++) {
             int count = 0;
