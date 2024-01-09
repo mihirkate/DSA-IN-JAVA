@@ -22,8 +22,8 @@ public class TopologicalSort {
 
         graph[3].add(new Edge(3, 1));
 
-        graph[4].add(new Edge(4, 1));
         graph[4].add(new Edge(4, 0));
+        graph[4].add(new Edge(4, 1));
 
         graph[5].add(new Edge(5, 0));
         graph[5].add(new Edge(5, 2));
