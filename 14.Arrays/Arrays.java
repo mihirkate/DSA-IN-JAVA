@@ -27,7 +27,7 @@ public class Arrays {
                 return -1;
             }
         }
-        return -1;
+
     }
 
     public static int getlargestNo(int number[]) {
@@ -190,11 +190,11 @@ public class Arrays {
 
     public static void main(String[] args) {
         // array();
-         linearSearch();
+        linearSearch();
         int number[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
         // getlargestNo(nu-mber);
         // System.out.println("largest is: " + getlargestNo(number));
-         System.out.println(binarySearch(number));
+        System.out.println(binarySearch(number));
         // reverseArray(number);
         // printPairs(number);
         // printSubArrays(number);
