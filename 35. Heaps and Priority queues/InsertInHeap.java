@@ -4,7 +4,7 @@ public class InsertInHeap {
     static class Heap {
         ArrayList<Integer> al = new ArrayList<>();
 
-        public void add(int data) {
+        public void add(int data) {// O(logn)
             // add at last
             al.add(data);
 
