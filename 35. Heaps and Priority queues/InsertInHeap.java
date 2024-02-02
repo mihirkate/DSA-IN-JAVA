@@ -25,6 +25,22 @@ public class InsertInHeap {
             return al.get(0);
         }
 
+        public int delete() {
+            int data = al.get(0);
+
+            // step 1 - swap first and Last
+            int temp = al.get(0);
+            al.set(0, al.get(al.size() - 1));
+            al.set(al.size() - 1, temp);
+
+            // setp 2- delete the last index
+            al.remove(al.size() - 1);
+
+            // step 3 - Heapify
+            heapify(0);
+            return data;
+        }
+
         public void heapify(int i) {
             int left = 2 * i + 1;
             int right = 2 * i + 2;
@@ -43,22 +59,6 @@ public class InsertInHeap {
                 heapify(min);
             }
 
-        }
-
-        public int delete() {
-            int data = al.get(0);
-
-            // step 1 - swap first and Last
-            int temp = al.get(0);
-            al.set(0, al.get(al.size() - 1));
-            al.set(al.size() - 1, temp);
-
-            // setp 2- delete the last index
-            al.remove(al.size() - 1);
-
-            // step 3 - Heapify
-            heapify(0);
-            return data;
         }
 
         public boolean isEmpty() {

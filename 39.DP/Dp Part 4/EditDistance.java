@@ -6,7 +6,6 @@ public class EditDistance {
         // initialization of DP array
         for (int i = 0; i < n + 1; i++) {
             for (int j = 0; j < m + 1; j++) {
-
                 if (i == 0) {
                     dp[i][j] = j;
                 }
@@ -46,7 +45,16 @@ public class EditDistance {
     }
 
     public static void main(String[] args) {
-
+        /*
+         * Given two strings str1 and str2 of length M and N respectively and below
+         * operations that can be performed on str1. Find the minimum number of edits
+         * (operations) to convert ‘str1‘ into ‘str2‘.
+         * 
+         * Operation 1 (INSERT): Insert any character before or after any index of str1
+         * Operation 2 (REMOVE): Remove a character of str1
+         * Operation 3 (Replace): Replace a character at any index of str1 with some
+         * other character.
+         */
         String str1 = "intention";
         String str2 = "execution";
         System.out.println(
